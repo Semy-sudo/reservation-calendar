@@ -307,6 +307,112 @@ export default function ReservationPage() {
       {showModal && (
         <div className="modal-overlay">
           <div className="modal">
+{/* 입금 안내 모달 */}
+{showModal && (
+  <div className="modal-overlay">
+    <div className="modal">
+
+      {/* 닫기 */}
+      <button
+        className="close-btn"
+        onClick={() => setShowModal(false)}
+      >
+        ✕
+      </button>
+
+      {/* 제목 */}
+      <h2>입금 안내</h2>
+      <p className="modal-sub">
+        신청 확인을 위해 아래 계좌로 입금해주세요.
+      </p>
+
+      {/* 계좌 박스 */}
+      <div className="account-box">
+        <div>
+          <p>국민은행 (송예인)</p>
+          <strong id="account-number">
+            57860201-241169
+          </strong>
+        </div>
+
+        <button
+          className="copy-btn"
+          onClick={() => {
+            navigator.clipboard.writeText(
+              "57860201-241169"
+            );
+            alert("계좌번호가 복사되었습니다");
+          }}
+        >
+          복사
+        </button>
+      </div>
+
+      {/* 입금 완료 안내 */}
+      <p className="complete-msg">
+        ✅ 입금 완료 시 신청이 확정됩니다.
+      </p>
+
+      {/* 🚨 꼭 확인해주세요 */}
+      <div className="notice-box">
+        <strong>🚨 꼭 확인해주세요 🚨</strong>
+
+        <p>
+          인스타그램 계정 <b>@sound_ye_sul</b>를 팔로우한 뒤,
+          <br />
+          아래 내용을 DM으로 보내주셔야 신청이 완료됩니다.
+        </p>
+
+        <p style={{ marginTop: "10px" }}>
+          입금자명 + 참여 날짜
+          <br />
+          (예: 최지훈 6/27 수요일)
+        </p>
+
+        <p style={{ color: "red", marginTop: "10px" }}>
+          ※ DM 확인이 되지 않을 경우,
+          파티 입장이 제한될 수 있습니다.
+        </p>
+      </div>
+
+      {/* Notice */}
+      <div className="notice-box" style={{ marginTop: "16px" }}>
+        <h3>Notice</h3>
+
+        <p>
+           예술링 은 신청서를 신중히 검토한 후,
+          <br />
+          모임에 어울리는 분들만 초대합니다.
+        </p>
+
+        <p>
+          신청 조건에 부합하지 않거나
+          <br />
+          신청 인원이 초과될 경우,
+          <br />
+          선정에서 제외될 수 있습니다.
+        </p>
+
+        <p style={{ marginTop: "10px" }}>
+          ※ 이 경우 참가비는 전액 환불되니 걱정 마세요.
+          <br />
+          진심을 담아 신청해 주신 모든 분께 감사드립니다 :)
+        </p>
+      </div>
+
+      {/* 확인 버튼 */}
+      <button
+        className="confirm-btn"
+        onClick={() => setShowModal(false)}
+      >
+        확인 완료
+      </button>
+
+    </div>
+  </div>
+)}
+
+
             <button
               className="close-btn"
               onClick={() =>
