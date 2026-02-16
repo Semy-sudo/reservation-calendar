@@ -7,7 +7,7 @@ export default function EventSlider() {
   const cards = [
     {
       title: "독술",
-      desc: "위스키와 책을 페어링하는 사람들",
+      desc: "독서와 술, 책과 위스키를 좋아하는 사람들",
       sub: "책과 나의 이야기에 취해보는 시간",
       includes: [
         "🍷 위스키 한잔",
@@ -18,7 +18,7 @@ export default function EventSlider() {
     },
     {
       title: "예술",
-      desc: "인생을 예술처럼 사는 사람들",
+      desc: "우연한 만남으로, 예술이 되는 사람들",
       sub: "어색했던 우리가 인연이 되는 시간 🍷",
       includes: [
         "🥂 웰컴 하이볼",
