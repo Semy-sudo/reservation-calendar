@@ -107,16 +107,37 @@ export default function ReservationPage() {
   const getEventLabel = (date) => {
     const day = date.getDay();
 
-    if (day === 3) return "술술";
+    // 목요일
+    if (day === 4) return "독술";
+
+    // 금 or 토 
     if (day === 5 || day === 6)
       return "예술";
 
     return null;
   };
 
+  /* ===============================
+   금액 계산
+=============================== */
+const getPrice = (date) => {
+  const day = date.getDay();
+
+  // 목요일 = 독술
+  if (day === 4) return 10000;
+
+  // 기본 금액
+  return 29000;
+};
+
+
   const seats = selectedDate
     ? getSeats(selectedDate)
     : { female: 0, male: 0 };
+
+  const price = selectedDate
+  ? getPrice(selectedDate)
+  : 0;
 
   /* ===============================
      화면
@@ -289,7 +310,7 @@ export default function ReservationPage() {
           <div className="price-box">
             결제금액{" "}
             <strong>
-              29,000원
+               {price.toLocaleString()}원
             </strong>
           </div>
 
