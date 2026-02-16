@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 import "./calendar.css";
+import EventSlider from "./EventSlider";
 
 import { db } from "../firebase";
 import { collection, getDocs } from "firebase/firestore";
@@ -151,6 +152,7 @@ const getPrice = (date) => {
       <p className="subtitle">
         방문 날짜를 선택해주세요
       </p>
+      <EventSlider />
 
       {/* 달력 */}
       <div className="calendar-card">

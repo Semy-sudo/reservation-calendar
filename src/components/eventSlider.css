@@ -1,0 +1,91 @@
+.slider-wrap {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+.slider {
+  display: flex;
+  transition: 0.5s;
+}
+
+.slide-card {
+  min-width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.card-inner {
+  background: #0f1117;
+  border-radius: 24px;
+  padding: 28px;
+  color: white;
+  border: 1px solid #c9a96e;
+  box-shadow: 0 0 30px rgba(201, 169, 110, 0.25);
+}
+
+.badge {
+  color: #c9a96e;
+  font-weight: bold;
+  margin-bottom: 14px;
+}
+
+.card-inner h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.sub {
+  opacity: 0.7;
+  margin-bottom: 20px;
+}
+
+.includes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* 네비 버튼 */
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 28px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+/* 도트 */
+.dots {
+  text-align: center;
+  margin-top: 14px;
+}
+
+.dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin: 0 4px;
+  background: #555;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dot.active {
+  background: #c9a96e;
+}
