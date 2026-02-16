@@ -81,8 +81,10 @@ export default function ReservationPage() {
   const getDefaultSeats = (date) => {
     const diff = getDateDiff(date);
 
-    if (diff <= 7) {
-      return { female: 3, male: 3 };
+    if (diff <= 2) {
+      return { female: 1, male: 3 };
+    }else if(diff <= 7){
+      return { female: 2, male: 4 };
     } else {
       return { female: 9, male: 9 };
     }

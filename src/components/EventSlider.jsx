@@ -10,7 +10,7 @@ export default function EventSlider() {
       desc: "위스키와 책을 페어링하는 사람들",
       sub: "책과 나의 이야기에 취해보는 시간",
       includes: [
-        "🍷 와인 1병",
+        "🍷 위스키 한잔",
         "🍽 간단한 안주",
         "🎵 잔잔한 음악",
         "🌙 혼술 감성"
@@ -21,8 +21,8 @@ export default function EventSlider() {
       desc: "인생을 예술처럼 사는 사람들",
       sub: "어색했던 우리가 인연이 되는 시간 🍷",
       includes: [
-        "🥂 drink 무제한",
-        "🍱 푸짐한 음식",
+        "🥂 웰컴 하이볼",
+        "🍱 포틀럭 파티",
         "🎯 대화 미션",
         "🌙 나를 알아가는 밤",
         "🤝 다정한 인연",
