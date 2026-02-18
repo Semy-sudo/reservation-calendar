@@ -79,16 +79,29 @@ export default function ReservationPage() {
   };
 
   const getDefaultSeats = (date) => {
-    const diff = getDateDiff(date);
+  const diff = getDateDiff(date);
 
-    if (diff <= 2) {
-      return { female: 1, male: 3 };
-    }else if(diff <= 7){
-      return { female: 2, male: 4 };
-    } else {
-      return { female: 9, male: 9 };
-    }
-  };
+  // 🔥 D-1 또는 당일
+  if (diff < 1) {
+    return { female: 0, male: 1 };
+  }
+
+  // D-2
+  if (diff <= 2) {
+    return { female: 3, male: 2 };
+  }
+  if (diff <= 3) {
+    return { female: 2, male: 1 };
+  }
+  // D-7
+  if (diff <= 7) {
+    return { female: 3, male: 4 };
+  }
+
+  // 그 외
+  return { female: 9, male: 9 };
+};
+
 
   const getSeats = (date) => {
     const key = date
