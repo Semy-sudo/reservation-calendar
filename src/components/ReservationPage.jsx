@@ -82,8 +82,17 @@ export default function ReservationPage() {
   const diff = getDateDiff(date);
 
   // 🔥 D-1 또는 당일
-  if (diff < 1) {
+
+
+
+  if (diff == 0) {
     return { female: 0, male: 1 };
+  }
+if (diff < 1) {
+  return { female: "마감", male: "마감" };
+}
+  if (diff <= 1) {
+    return { female: 2, male: 1 };
   }
 
   // D-2
