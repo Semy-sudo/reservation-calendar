@@ -102,6 +102,18 @@ if (diff < 1) {
   if (diff <= 3) {
     return { female: 2, male: 1 };
   }
+
+if (diff <= 4) {
+    return { female: 4, male: 5 };
+  }
+// D-5
+  if (diff <= 5) {
+    return { female: 4, male: 4 };
+  }
+  // D-6
+  if (diff <= 6) {
+    return { female: 4, male: 3 };
+  }
   // D-7
   if (diff <= 7) {
     return { female: 3, male: 4 };
@@ -132,8 +144,8 @@ if (diff < 1) {
   const getEventLabel = (date) => {
     const day = date.getDay();
 
-    // 목요일
-    if (day === 4) return "독술";
+    // 일요일
+    if (day === 0) return "독술";
 
     // 금 or 토 
     if (day === 5 || day === 6)
@@ -149,7 +161,7 @@ const getPrice = (date) => {
   const day = date.getDay();
 
   // 목요일 = 독술
-  if (day === 4) return 10000;
+  if (day === 0) return 10000;
 
   // 기본 금액
   return 29000;
