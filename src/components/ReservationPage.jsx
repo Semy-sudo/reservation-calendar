@@ -86,13 +86,13 @@ export default function ReservationPage() {
 
 
   if (diff == 0) {
-    return { female: 0, male: 1 };
+    return { female: 1, male: 2 };
   }
 if (diff < 1) {
   return { female: "마감", male: "마감" };
 }
   if (diff <= 1) {
-    return { female: 2, male: 1 };
+    return { female: 2, male: 2 };
   }
 
   // D-2
