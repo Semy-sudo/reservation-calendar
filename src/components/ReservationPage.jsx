@@ -29,6 +29,13 @@ export default function ReservationPage() {
      날짜 클릭
   =============================== */
   const handleDateClick = (date) => {
+    const day = date.getDay();
+
+    // 월 화 수 -> 클릭 무시
+    if([1,2,3].includes(day)){
+      return;
+    }
+
     setSelectedDate(date);
   };
 
@@ -151,6 +158,10 @@ if (diff <= 4) {
     if (day === 5 || day === 6)
       return "예술";
 
+    // 목
+    if (day === 4)
+      return "사주팅";
+
     return null;
   };
 
@@ -160,11 +171,13 @@ if (diff <= 4) {
 const getPrice = (date) => {
   const day = date.getDay();
 
-  // 목요일 = 독술
-  if (day === 0) return 10000;
+  // 일요일 = 독술
+  if (day === 0) return 20000;
+
+  if( day === 4) return 39000;
 
   // 기본 금액
-  return 29000;
+  return 30000;
 };
 
 
