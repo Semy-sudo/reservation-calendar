@@ -89,3 +89,57 @@
 .dot.active {
   background: #c9a96e;
 }
+
+.horizontal-slider {
+  overflow-x: auto;
+  padding: 10px 0;
+}
+
+.slider-track {
+  display: flex;
+  gap: 12px;
+  padding: 0 10px;
+}
+
+.card {
+  min-width: 140px;
+  height: 180px;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 어두운 오버레이 */
+.card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.25);
+}
+
+/* 텍스트 */
+.card p {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: white;
+  font-size: 13px;
+  font-weight: bold;
+  z-index: 2;
+}
+
+.horizontal-slider {
+  scroll-snap-type: x mandatory;
+}
+
+.card {
+  scroll-snap-align: start;
+}

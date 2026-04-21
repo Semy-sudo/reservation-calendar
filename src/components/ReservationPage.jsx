@@ -201,21 +201,37 @@ const getPrice = (date) => {
       <p className="subtitle">
         방문 날짜를 선택해주세요
       </p>
-      {/* 원형 이미지 영역 */}
-<div className="circle-images">
 
-  {/* 후기 */}
-  <div className="circle-box">
-    <img src="images/review.jpg" alt="소셜링 후기" />
-    <p>소셜링 후기</p>
+
+<div className="horizontal-slider">
+  <div className="slider-track">
+
+    <div className="card">
+      <img src="images/review.jpg" />
+      <p>💬 소셜링 후기</p>
+    </div>
+
+    <div className="card">
+      <img src="images/yesul1.jpg" />
+      <p>💬 예술링 현장</p>
+    </div>
+
+    <div className="card">
+      <img src="images/yesul2.jpg" />
+      <p>📸 예술 포토 후기</p>
+    </div>
+
+    <div className="card">
+      <img src="images/yesul3.jpg" />
+      <p>📸 분위기 미리보기</p>
+    </div>
+
+    <div className="card">
+      <img src="images/sajuting.jpg" />
+      <p>✨ 사주 네티워킹</p>
+    </div>
+
   </div>
-
-  {/* 현장 */}
-  <div className="circle-box">
-    <img src="images/social.jpg" alt="예술링 현장" />
-    <p>예술링 현장</p>
-  </div>
-
 </div>
 
       <EventSlider />
