@@ -93,7 +93,7 @@ export default function ReservationPage() {
 
 
   if (diff == 0) {
-    return { female: 1, male: 1 };
+    return { female: 1, male: 0 };
   }
 if (diff < 1) {
   return { female: "마감", male: "마감" };
