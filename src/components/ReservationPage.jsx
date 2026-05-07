@@ -177,7 +177,7 @@ const getPrice = (date) => {
   if( day === 4) return 39000;
 
   // 기본 금액
-  return 30000;
+  return 35000;
 };
 
 
