@@ -155,11 +155,11 @@ if (diff <= 4) {
     if (day === 0) return "독술";
 
     // 금 or 토 
-    if (day === 5 || day === 6)
+    if (day === 5)
       return "예술";
 
     // 목
-    if (day === 4)
+    if (day === 4 || day === 6)
       return "사주팅";
 
     return null;
