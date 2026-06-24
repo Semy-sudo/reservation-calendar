@@ -1,5 +1,6 @@
 /* 전체 배경 */
 .page {
+  width: 100%;
   min-height: 100vh;
   background: #0b0b0b;
   color: white;
@@ -10,8 +11,6 @@
 
   padding-top: 80px;
 
-  width: 100%;
-  max-width: 500px;
 
   margin: 0 auto;
 }
