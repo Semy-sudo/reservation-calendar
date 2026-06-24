@@ -174,7 +174,7 @@ const getPrice = (date) => {
   // 일요일 = 독술
   if (day === 0) return 20000;
 
-  if( day === 4) return 39000;
+  if( day === 4 || day===6) return 39000;
 
   // 기본 금액
   return 35000;
